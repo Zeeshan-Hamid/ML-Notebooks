@@ -33,7 +33,7 @@ from sklearn.svm import SVC
 classifier = SVC(kernel='rbf',gamma='scale', random_state = 0)
 classifier.fit(X_train, Y_train)
 
-classifier.predict(sc.transform([[49, 28000]]))
+
 
 Y_pred = classifier.predict(X_test)
 print(np.concatenate((Y_pred.reshape(len(Y_pred), 1), Y_test.reshape(len(Y_test),1)), 1))
